@@ -15,7 +15,11 @@ export default component$(() => {
           <>
             <ul class='grid grid-cols-3 gap-1'>
               {results.map((character: Character) => {
-                return <CharacterComponent {...character} />;
+                return (
+                  <li key={character.id}>
+                    <CharacterComponent {...character} />
+                  </li>
+                );
               })}
             </ul>
           </>
